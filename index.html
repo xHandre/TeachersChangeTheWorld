@@ -66,6 +66,45 @@
                 margin: 10px 0;
             }
         }
+
+        /* Fix for overflow issue with the testimonial carousel buttons */
+        .testimonial-carousel {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: var(--color-accent);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 3px;
+            transition: background-color 0.3s ease;
+        }
+
+        .carousel-btn.prev-btn {
+            left: 10px;
+        }
+
+        .carousel-btn.next-btn {
+            right: 10px;
+        }
+
+        .carousel-btn:hover {
+            background-color: var(--color-primary);
+        }
+
+        @media (max-width: 768px) {
+            .carousel-btn {
+                padding: 5px 10px;
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 <body>
